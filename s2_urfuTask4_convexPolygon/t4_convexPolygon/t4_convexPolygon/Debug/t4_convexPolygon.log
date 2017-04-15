@@ -1,0 +1,9 @@
+﻿  TConvexPolygon.cpp
+  Создание кода...
+c:\users\1\yandexdisk\yниверситет\ятп\checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tspeclinkedlist.h(85): warning C4715: TSpecLinkedList<TConvexPolygon::Vertex>::getByKey: значение возвращается не при всех путях выполнения
+  Компиляция...
+  main.cpp
+  Создание кода...
+c:\users\1\yandexdisk\yниверситет\ятп\checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tspeclinkedlist.h(85): warning C4715: TSpecLinkedList<TConvexPolygon::Vertex>::getByKey: значение возвращается не при всех путях выполнения
+  t4_convexPolygon.vcxproj -> C:\Users\1\YandexDisk\yНиверситет\ЯТП\checkTasks_2s\s2_urfuTask4_convexPolygon\t4_convexPolygon\Debug\t4_convexPolygon.exe
+  t4_convexPolygon.vcxproj -> C:\Users\1\YandexDisk\yНиверситет\ЯТП\checkTasks_2s\s2_urfuTask4_convexPolygon\t4_convexPolygon\Debug\t4_convexPolygon.pdb (Partial PDB)

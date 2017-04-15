@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\checktasks_2s\s2_urfutask2_armstrongnumbers\t2_armstrongnumbers\t2_armstrongnumbers\main.cpp(45): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\checktasks_2s\s2_urfutask2_armstrongnumbers\t2_armstrongnumbers\t2_armstrongnumbers\main.cpp(48): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  t2_ArmstrongNumbers.vcxproj -> C:\Users\Администратор\YandexDisk-ySunural\yНиверситет\ЯТП\checkTasks_2s\s2_urfuTask2_ArmstrongNumbers\t2_ArmstrongNumbers\Debug\t2_ArmstrongNumbers.exe
+  t2_ArmstrongNumbers.vcxproj -> C:\Users\Администратор\YandexDisk-ySunural\yНиверситет\ЯТП\checkTasks_2s\s2_urfuTask2_ArmstrongNumbers\t2_ArmstrongNumbers\Debug\t2_ArmstrongNumbers.pdb (Partial PDB)
