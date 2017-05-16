@@ -16,20 +16,6 @@ int main() {
 	cout << "ПЛОЩАДЬ И ПЕРИМЕТР ВЫПУКЛОГО МНОГОУГОЛЬНИКА\n\n";
 	cout << "Для выхода нажмите Esc \n";
 
-	/*
-	TSpecLinkedList<int>* list = new TSpecLinkedList<int>();
-	list->addtNode(8);
-	list->addtNode(7);
-	list->addtNode(3);
-	list->addtNode(7);
-	list->addtNode(5);
-	list->addtNode(6);
-	list->addtNode(15);
-	list->displayList();
-	cout << list->count << "\n";
-	cout << "\nКонец\n";
-	*/
-
 	while (true) {
 		try {
 
@@ -70,21 +56,10 @@ int main() {
 				if ((No) &&
 					(x == polygon->verticesList->getFirst().x &&
 					(y == polygon->verticesList->getFirst().y)))
-				{
-					
-					
+				{						
 					TConvexPolygon::Vertex V = polygon->verticesList->getByKey(No);
 					polygon->verticesList->recordDataByKey(V, 0);
-
-					/*polygon->verticesList->getFirst().axVtoV = 
-						polygon->verticesList->getByKey(No).axVtoV;
-
-
-					polygon->verticesList->getByKey(No).ayVtoV =
-						polygon->vertices[No].ayVtoV;
-
-					*/
-
+								
 					break;
 				}	
 				
@@ -92,14 +67,7 @@ int main() {
 			};
 
 			polygon->verticesList->displayList();
-
-			//Отладка, в продакшн стереть
-		/*	cout << "Кол-во вершин " << polygon->getCountVertices() << "\n";
-			for (int i = 0; i < polygon->getCountVertices(); i++) {
-				polygon->displayVertex(polygon->vertices[i]);
-			}
-		*/
-
+	
 			cout << "Площадь: " << polygon->calcArea() << '\n';
 			cout << "Периметр: " << polygon->calcPerimeter() << '\n';
 			delete polygon;

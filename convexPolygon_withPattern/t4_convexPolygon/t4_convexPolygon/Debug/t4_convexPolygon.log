@@ -1,0 +1,22 @@
+﻿  main.cpp
+c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tspecexception.h(4): error C2011: 'TSpecException': 'class' type redefinition
+  c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tspecexception.h(4): note: see declaration of 'TSpecException'
+c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\abstractfactory.h(12): error C2801: 'operator =' must be a non-static member
+  c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\abstractfactory.h(30): note: see reference to class template instantiation 'AbstractFactory<T>' being compiled
+c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\main.cpp(99): error C2027: use of undefined type 'TSpecException'
+  c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tspecexception.h(4): note: see declaration of 'TSpecException'
+c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\main.cpp(99): error C2228: left of '.getErrorMessage' must have class/struct/union
+c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\main.cpp(98): error C2316: 'TSpecException &': cannot be caught as the destructor and/or copy constructor are inaccessible or deleted
+  TConvexPolygon.cpp
+c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tspecexception.h(4): error C2011: 'TSpecException': 'class' type redefinition
+  c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tspecexception.h(4): note: see declaration of 'TSpecException'
+c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tconvexpolygon.cpp(107): error C2027: use of undefined type 'TSpecException'
+  c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tspecexception.h(4): note: see declaration of 'TSpecException'
+c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tconvexpolygon.cpp(112): error C2027: use of undefined type 'TSpecException'
+  c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tspecexception.h(4): note: see declaration of 'TSpecException'
+c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tconvexpolygon.cpp(117): error C2027: use of undefined type 'TSpecException'
+  c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\tspecexception.h(4): note: see declaration of 'TSpecException'
+  AbstractFactory.h
+c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\abstractfactory.h(12): error C2801: 'operator =' must be a non-static member
+  c:\users\администратор\yandexdisk-ysunural\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask4_convexpolygon\t4_convexpolygon\t4_convexpolygon\abstractfactory.h(30): note: see reference to class template instantiation 'AbstractFactory<T>' being compiled
+  Generating Code...

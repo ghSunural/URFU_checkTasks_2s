@@ -3,38 +3,43 @@
 #include <cstring>
 #include <conio.h>
 
+//strchr
 #define ESC 27
 
 using namespace std;
 
+const int MAX_SIZE = 100;
+const char DELIMITERS_STRING[] = " ,;:-.!?";
+
 bool getAnswer(char string[]);
 bool isDelimiter(char ch);
-bool isSameLength(int, int);
+bool isTheSameLength(int, int);
 
 int main() {
 
 	setlocale(LC_CTYPE, "rus");
 	cout << "ПРОВЕРКА ДЛИНЫ СЛОВ \n";
-	cout << "Введите строку. В качестве разделителей слов используйте\n"<<
-		    "пробел, ; :-.!? ";
+	cout << "Введите строку. В качестве разделителей слов используйте\n" <<
+		"пробел, ; :-.!? " << "\n";
 
-
-	char string[100];
-
-	while (_getch()!= ESC) {
+	char string[MAX_SIZE];
+	char delimitersString[] = " ,;:-.!?";
+	while (_getch() != ESC) {
 
 		gets_s(string);
 		cout << '\n';
+
+
+		//
+		//cout << string << '\n';
+
 		getAnswer(string)
-			? cout << "Да, слова одинаковой длины \n"
+			? cout << "Да, слова одинаковой длины\n"
 			: cout << "Нет, слова разной длины\n";
 
 	}
 
-
-	//system("pause");
 	return 0;
-
 }
 //-------------------------------------------------
 bool getAnswer(char string[]) {
@@ -42,45 +47,46 @@ bool getAnswer(char string[]) {
 	int currentWordLength = 0;
 	int lastWordLength = 0;
 
-	int N = 0;
-	while (string[N]) {
+	int ptrB = 0;
+	int ptrE = 0;
+	int ptrCur = 0;
 
-		if (!isDelimiter(string[N])) {
-			currentWordLength++;
+	//пока не достигнут конец строки 
+	while (string[ptrCur]) {
+
+		//strchr(delemiters, string[ptrCur]) != NULL)
+		while (string[ptrCur] && isDelimiter(string[ptrCur])) {
+			ptrCur++;
 		}
-		else {
-			if (isSameLength(lastWordLength, currentWordLength)) {
-				lastWordLength = currentWordLength;
-				currentWordLength = 0;
-			}
-			else {
-				return false;
-			}
+		ptrB = ptrCur;
+
+		while (string[ptrCur] && !isDelimiter(string[ptrCur])) {
+			ptrCur++;
+		}
+		ptrE = ptrCur;
+
+
+		currentWordLength = ptrE - ptrB;
+		if (!isTheSameLength(lastWordLength, currentWordLength)) {
+			return false;
 		}
 
-		N++;
-	}
+		//cout << "l" << lastWordLength << "\n";
+		//cout << "c"<< currentWordLength << "\n";
+		lastWordLength = currentWordLength;
 
-
-	if (isSameLength(lastWordLength, currentWordLength)) {
-		return true;
 	}
-	else {
-		return false;
-	}
-
 
 	return true;
 }
 
 //-------------------------------------------------
 bool isDelimiter(char ch) {
-
-	char delimitersString[] = " ,;:-.!?";
+	
 	int N = 0;
-	while (delimitersString[N]) {
+	while (DELIMITERS_STRING[N]) {
 
-		if (ch == delimitersString[N]) {
+		if (ch == DELIMITERS_STRING[N]) {
 
 			return true;
 		}
@@ -90,9 +96,9 @@ bool isDelimiter(char ch) {
 	return false;
 }
 //-------------------------------------------------
-bool isSameLength(int length1, int length2) {
+bool isTheSameLength(int lastWordLength, int currentWordLength) {
 
-	if (!length1 || (length1 == length2)) {
+	if (!lastWordLength || !currentWordLength || currentWordLength == lastWordLength) {
 
 		return true;
 	}

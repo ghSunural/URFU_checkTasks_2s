@@ -1,3 +1,5 @@
 ﻿  main.cpp
-  t3_palindrome.vcxproj -> C:\Users\1\YandexDisk\yНиверситет\ЯТП\checkTasks_2s\s2_urfuTask3_palindrome\t3_palindrome\Debug\t3_palindrome.exe
-  t3_palindrome.vcxproj -> C:\Users\1\YandexDisk\yНиверситет\ЯТП\checkTasks_2s\s2_urfuTask3_palindrome\t3_palindrome\Debug\t3_palindrome.pdb (Partial PDB)
+c:\users\1\yandexdisk\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask3_palindrome\t3_palindrome\t3_palindrome\main.cpp(99): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\1\yandexdisk\yниверситет\ятп\urfu_checktasks_2s\s2_urfutask3_palindrome\t3_palindrome\t3_palindrome\main.cpp(124): warning C4018: <: несоответствие типов со знаком и без знака
+  t3_palindrome.vcxproj -> C:\Users\1\YandexDisk\yНиверситет\ЯТП\URFU_checkTasks_2s\s2_urfuTask3_palindrome\t3_palindrome\Debug\t3_palindrome.exe
+  t3_palindrome.vcxproj -> C:\Users\1\YandexDisk\yНиверситет\ЯТП\URFU_checkTasks_2s\s2_urfuTask3_palindrome\t3_palindrome\Debug\t3_palindrome.pdb (Partial PDB)

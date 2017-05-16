@@ -1,31 +1,39 @@
 #include <iostream>
-#include "conio.h"
+#include <conio.h>
 
 #include "TSpecException.h"
 
+//CtrlK CtrlD
+
 using namespace std;
 
-void entryArray(int* &array, int &maxLenght, int);
-void displayArmstrongNumber(int[], int);
+void entryArray(int* &array, int &maxLenght);
+void displayOnlyArmstrongNumber(int[], int);
 bool isArmstrongNumber(int);
 int countDigits(int);
+bool isNaturalNumber(double N);
 
-//153, 370, 371, 407, 1634, 8208, 9474
+
+//0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407, 1634, 8208, 9474, 
+//54748, 92727, 93084, 548834, 1741725, 4210818, 9800817, 9926315, 
+//24678050, 24678051, 88593477, 146511208, 472335975, 534494836, 912985153.
 int main() {
 
 	setlocale(LC_CTYPE, "rus");
 	cout << "ЧИСЛА АРМСТРОНГА \n";
 
-	try {
+	try
+	{
 		int* numberArray;
 		int maxLenght;
-		entryArray(numberArray, maxLenght, 0);
-		displayArmstrongNumber(numberArray, maxLenght);
+		entryArray(numberArray, maxLenght);
+		displayOnlyArmstrongNumber(numberArray, maxLenght);
+	}
+	catch (TSpecException &e)
+	{
+		cout << e.getErrorMessage();
+	}
 
-	}
-	catch (const std::exception&) {
-		cout << "Что-то пошло не так \n";
-	}
 
 	system("pause");
 	return 0;
@@ -33,21 +41,17 @@ int main() {
 //-------------------------------------------------
 bool isArmstrongNumber(int N) {
 
-	if (N < 0) {
-		throw TSpecException("Число должно быть натуральным");
-	}
-
 	int iCountDigits = countDigits(N);
-	int summPow = 0;
+	int sumDigitPowers = 0;
 	int tempN = N;
 
 	while ((int)(tempN / 10)) {
-		summPow += pow(tempN % 10, iCountDigits);
+		sumDigitPowers += pow(tempN % 10, iCountDigits);
 		tempN /= 10;
 	}
-	summPow += pow(tempN, iCountDigits);
+	sumDigitPowers += pow(tempN, iCountDigits);
 
-	if (N == summPow) {
+	if (N == sumDigitPowers) {
 
 		return true;
 	}
@@ -68,24 +72,44 @@ int countDigits(int N) {
 }
 
 //-------------------------------------------------
-void entryArray(int* &array, int &maxLenght, int breakChar) {
+void entryArray(int *&array, int &maxLenght) {
+
 
 	cout << "Задайте максимальное количество проверяемых значений \n";
 	cin >> maxLenght;
-	cout << "Вводите \n";
-	array = new int[maxLenght]();
-	int currentValue = 0;
-	int i = 0;
-	do {
-		cin.clear();
-		cin >> currentValue;
-		array[i] = currentValue;
-	} while (i < maxLenght && currentValue);
+	try {
+		array = new int[maxLenght]; //()
+	}
+	catch (const std::exception&)
+	{
+		throw TSpecException("Количество значений должно быть натуральным числом\n");
+	}
 
+	cout << "Вводите \n";
+	double currentValue;
+	//int i = 0;
+
+	for (size_t i = 0; i < maxLenght; i++)
+	{
+		//cin.clear();
+		cin >> currentValue;
+		if (!currentValue) {
+			break;
+		}
+
+		if (!isNaturalNumber(currentValue))
+		{
+			continue;
+		}
+			
+
+		array[i] = currentValue;
+	}
+	//while (i < maxLenght)	{	i++;}
 
 }
 //-------------------------------------------------
-void displayArmstrongNumber(int array[], int arrayLenght) {
+void displayOnlyArmstrongNumber(int array[], int arrayLenght) {
 
 	cout << "Числа Армстронга: \n";
 	for (int i = 0; i < arrayLenght; i++) {
@@ -93,5 +117,16 @@ void displayArmstrongNumber(int array[], int arrayLenght) {
 		{
 			cout << array[i] << '\n';
 		}
+
 	}
+}
+
+bool isNaturalNumber(double N) {
+
+	if (!(N - (int)N) && N > 0) {
+
+		return true;
+	}
+
+	return false;
 }
